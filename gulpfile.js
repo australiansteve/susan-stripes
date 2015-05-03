@@ -26,7 +26,8 @@ gulp.task('styles', function() {
 	return sass('assets/sass/', {
 			style: 'expanded',
 			lineNumbers: true,
-			container: 'susanstripes' 
+			container: 'susanstripes',
+			sourcemap: true
 		})
 		.on('error', notify.onError(function(error) {
 			return "Error: " + error.message;
@@ -47,9 +48,26 @@ gulp.task('styles', function() {
 		}));
 });
 
+gulp.task('deploy', function() {
+	var files = [
+		'assets/components/**/*',
+		'assets/css/*',
+		'style.css', 
+		'inc/**.*',
+		'languages/**.*',
+		'layouts/**.*',
+		'screenshot.png',
+		'*.php',
+		'**/*.js'];
+
+	var dest = '/var/www/html/theme-dev/wp-content/themes/susanstripes';
+
+	return gulp.src(files, {base:"."})
+	        .pipe(gulp.dest(dest));
+});
 
 // Our default gulp task, which runs 'styles' when a sass file changes.  This is task is executed by typing 'gulp' on the Terminal
-gulp.task('default', ['styles', 'browser-sync'], function() {
+gulp.task('default', ['styles', 'deploy'], function() {
 	// Watch our sass files and run 'styles' task when changes are made
-	gulp.watch('assets/sass/**/*.scss', ['styles']);
+	//gulp.watch('assets/sass/**/*.scss', ['styles']);
 })

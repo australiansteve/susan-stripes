@@ -111,14 +111,17 @@ if ( !function_exists( 'susanstripes_styles' ) ) :
 
 			// Enqueue our debug stylesheet [development mode - non-minified]
 			wp_enqueue_style( 'susanstripes_styles', get_stylesheet_directory_uri() . '/assets/css/app.css', '', '9' );
+			wp_enqueue_style( 'font_awesome_styles', get_stylesheet_directory_uri() . '/assets/components/components-font-awesome/css/font-awesome.css', '' );
 
 		else :
 
 			// Enqueue our minified stylesheet [production mode - minified stylesheet]
 			wp_enqueue_style( 'susanstripes_styles', get_stylesheet_directory_uri() . '/assets/css/app.min.css', '', '9' );
+			wp_enqueue_style( 'font_awesome_styles', get_stylesheet_directory_uri() . '/assets/components/components-font-awesome/css/font-awesome.min.css', '' );
 
 		endif;
 
+		wp_enqueue_style( 'theme_styles', get_stylesheet_directory_uri() . '/style.css', '' );
 
 	}
 

@@ -24,6 +24,7 @@
     "tests"
   ],
   "devDependencies": {
-    "foundation": "~5.5.1"
+    "foundation": "~5.5.1",
+    "components-font-awesome": "~4.3.0"
   }
 }
