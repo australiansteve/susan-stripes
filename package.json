@@ -8,8 +8,8 @@
     "gulp-rename": "^1.2.0",
     "gulp-ruby-sass": "^1.0.0-alpha.3"
   },
-  "name": "heisenberg",
-  "description": "Heisenberg - Zeek Starter Theme ===",
+  "name": "susanstripes",
+  "description": "Susanstripes - Zeek Starter Theme ===",
   "version": "0.0.1",
   "main": "gulpfile.js",
   "dependencies": {
@@ -21,12 +21,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/ZeekInteractive/heisenberg"
+    "url": "https://github.com/australiansteve/susanstripes"
   },
   "author": "Zeek Interactive",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/ZeekInteractive/heisenberg/issues"
+    "url": "https://github.com/australiansteve/susanstripes/issues"
   },
-  "homepage": "https://github.com/ZeekInteractive/heisenberg"
+  "homepage": "https://github.com/australiansteve/susanstripes"
 }

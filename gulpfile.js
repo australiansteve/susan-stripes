@@ -15,7 +15,7 @@ gulp.task('browser-sync', function() {
 	];
 
 	browserSync.init(files, {
-		proxy: 'heisenberg.dev/'
+		proxy: 'localhost/'
 	});
 });
 
@@ -26,7 +26,7 @@ gulp.task('styles', function() {
 	return sass('assets/sass/', {
 			style: 'expanded',
 			lineNumbers: true,
-			container: 'heisenberg' 
+			container: 'susanstripes' 
 		})
 		.on('error', notify.onError(function(error) {
 			return "Error: " + error.message;
