@@ -16,10 +16,10 @@
 }
 
 .main-navigation {
-	background: #000000;
+	background: #FFFFFF;
 
 	#site-navigation {
-		background: #000000;
+		background: #FFFFFF;
 	}
 }
 
@@ -28,11 +28,11 @@
 }
 
 .top-bar-section li:not(.has-form) a:not(.button) {
-	background: #000000;
-  	color: #FFFFFF;
+	background: #FFFFFF;
+  	color: #000000;
 }
 
 .top-bar-section li:not(.has-form) a:not(.button):hover {
-	background: #FFFFFF;
-  	color: #000000;
+	background: #CCCCCC;
+  	color: #FFFFFF;
 }
