@@ -17,6 +17,6 @@
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer">
-		<?php susanstripes_entry_footer(); ?>
+		
 	</footer><!-- .entry-footer -->
 </article><!-- #post-## -->
