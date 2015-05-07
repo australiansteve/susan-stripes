@@ -33,7 +33,6 @@
 		<aside class="left-off-canvas-menu">
 		<!-- whatever you want goes here -->
 			<ul>
-				<li><a href="<?php bloginfo('url'); ?>">Home</a></li>
 				<?php wp_nav_menu( array( 'theme_location' => 'primary', 'container' => '', 'menu_class' => '', 'menu_id' => '', 'items_wrap' => '%3$s' ) ); ?>
 			</ul>
 		</aside>
