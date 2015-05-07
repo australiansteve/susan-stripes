@@ -1,0 +1,31 @@
+.left-off-canvas-menu {
+	background: url("http://weavercrawford.com/wp-content/uploads/2015/04/bg.png") repeat scroll 0% 0% / 180px auto rgb(0, 0, 0);
+
+	ul {
+		list-style-type: none;
+		margin: 0;
+
+		li {
+			padding-left: 1rem;
+			height: 45px; /* same as nav bar height */
+
+			a {
+				line-height: 2.75rem; /* vertically spaces menu items nicely */
+				display: block;
+			}
+
+		}
+
+		li:nth-child(odd) a {
+			color: #FFF;
+		}
+		
+		li:nth-child(even) {
+			background: #FFF;
+
+			a {
+				color: #000;
+			}
+		}
+	}
+}

@@ -36,3 +36,12 @@
 	background: #CCCCCC;
   	color: #FFFFFF;
 }
+
+.top-bar-section li.active:not(.has-form) a:not(.button), .top-bar-section li.active:not(.has-form) a:not(.button):hover {
+	background: #CCCCCC;
+  	color: #FFFFFF;	
+}
+
+nav.tab-bar {
+	background: #000000
+}
