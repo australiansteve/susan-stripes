@@ -50,15 +50,20 @@ gulp.task('styles', function() {
 
 gulp.task('deploy', function() {
 	var files = [
-		'assets/components/**/*',
-		'assets/css/*',
-		'style.css', 
+		'assets/components/modernizr/modernizr.js',
+		'assets/components/fastclick/lib/fastclick.js',
+		'assets/components/foundation/js/foundation.min.js',
+		'assets/components/components-font-awesome/css/**/*',
+		'assets/components/components-font-awesome/fonts/**/*',
+		'assets/css/*', 
 		'inc/**.*',
+		'js/**/*.js',
 		'languages/**.*',
 		'layouts/**.*',
+		'page-templates/**/*',
 		'screenshot.png',
 		'*.php',
-		'**/*.js'];
+		'style.css'];
 
 	var dest = '/var/www/html/theme-dev/wp-content/themes/susanstripes';
 
