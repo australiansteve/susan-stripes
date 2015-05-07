@@ -1,5 +1,5 @@
 #masthead {
-	background: #ccc;
+	background: #FFF;
 }
 
 .site-branding {
@@ -16,9 +16,23 @@
 }
 
 .main-navigation {
-	background: #333;
+	background: #000000;
+
+	#site-navigation {
+		background: #000000;
+	}
 }
 
 .main-navigation ul {
 	margin: 0;
+}
+
+.top-bar-section li:not(.has-form) a:not(.button) {
+	background: #000000;
+  	color: #FFFFFF;
+}
+
+.top-bar-section li:not(.has-form) a:not(.button):hover {
+	background: #FFFFFF;
+  	color: #000000;
 }
