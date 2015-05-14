@@ -121,12 +121,21 @@ if ( !function_exists( 'susanstripes_styles' ) ) :
 
 		endif;
 
-		wp_enqueue_style( 'theme_styles', get_stylesheet_directory_uri() . '/style.css', '' );
+	}
+
+add_action( 'wp_enqueue_scripts', 'susanstripes_styles' );
+
+endif;
+
+if ( !function_exists( 'susanstripes_final_styles' ) ) :
+
+	function susanstripes_final_styles() {
+
+		wp_enqueue_style( 'final_styles', get_stylesheet_directory_uri() . '/style.css', '' );
 
 	}
 
-
-add_action( 'wp_enqueue_scripts', 'susanstripes_styles' );
+add_action( 'wp_enqueue_scripts', 'susanstripes_final_styles' , 99 ); /* 99 = LAST */
 
 endif;
 

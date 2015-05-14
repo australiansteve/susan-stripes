@@ -27,3 +27,16 @@ Susanstripes is based on Underscores http://underscores.me/, (C) 2012-2015 Autom
   	text-align: center;
  	padding: 1rem 2rem;
 }
+
+/* Overwrite default 'slick-carousel' themes */
+.austeve-gallery-images ul.slick-dots {
+	margin-left: 0;
+}
+
+.slick-prev {
+	left: 5px;
+}
+
+.slick-next {
+	right: 5px;
+}
