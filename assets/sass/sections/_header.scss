@@ -1,9 +1,30 @@
 #masthead {
 	background: #FFF;
+	margin-top: 1rem;
 }
 
 .site-branding {
-	margin-bottom: 1.25rem;
+	.container {
+	    height: 216px;
+	    max-height: 216px;
+	}
+
+	.stripe {
+	    height: 11.1%;
+	    width: 100%; 
+		z-index: 1;
+	}
+
+	.stripe:nth-child(odd) {
+	    background: black;
+	    position: relative;
+	    display:none;
+	}
+}
+
+.site-header {
+	z-index: 2;
+	position: relative;
 }
 
 .site-title {
@@ -46,9 +67,21 @@ nav.tab-bar {
 	background: #000000
 }
 
+/* Chrome, Safari, Opera */
+@-webkit-keyframes slideIn {
+    from {left: -100%;}
+    to {left: 0px;}
+}
+
+@keyframes slideIn {
+    from {left: -100%;}
+    to {left: 0px;}
+}
+
 @media only screen and (min-width: 40.063em) {
 	#masthead {
-		margin-top: 1rem;
+		margin-top: 2rem;
+		margin-bottom: 2rem;
 	}
 
 }

@@ -47,17 +47,37 @@
 
 			<div class="site-branding">
 
-				<div class="row"><!-- .row start -->
+				<div class="row show-for-small-only">
 
 					<div class="small-12 columns"><!-- .columns start -->
 
-						<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+						<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img class="site-header" src="http://weavercrawford.com/wp-content/uploads/2015/05/awc2name-small-screen.png"/></a>
 
 					</div><!-- .columns end -->
 
-					<div class="small-12 columns"><!-- .columns start -->
+				</div><!-- .row end -->
 
-						<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
+				<div class="row show-for-medium-up">
+
+					<div class="medium-6 columns"><!-- .columns start -->
+
+						<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img class="site-header" src="http://weavercrawford.com/wp-content/uploads/2015/05/awc2name-large-screen-black.png"/></a>
+
+					</div><!-- .columns end -->
+
+					<div class="medium-6 columns"><!-- .columns start -->
+
+						<div class="container">
+						    <div class="stripe"></div>
+						    <div class="stripe"></div>
+						    <div class="stripe"></div>
+						    <div class="stripe"></div>
+						    <div class="stripe"></div>
+						    <div class="stripe"></div>
+						    <div class="stripe"></div>
+						    <div class="stripe"></div>
+						    <div class="stripe"></div>
+						</div>
 
 					</div><!-- .columns end -->
 

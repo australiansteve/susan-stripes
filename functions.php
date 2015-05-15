@@ -166,6 +166,13 @@ function susanstripes_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'susanstripes_scripts' );
 
+
+function susanstripes_init_scripts() {
+	wp_enqueue_script('susanstripes_init_scripts', get_template_directory_uri(__FILE__) . '/js/susanstripes-onload.js', array('jquery') );
+}
+add_action('init', 'susanstripes_init_scripts');
+
+
 /**
  * Implement the Custom Header feature.
  */
