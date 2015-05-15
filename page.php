@@ -12,8 +12,6 @@
 
 get_header(); ?>
 
-<div class="row"><!-- .row start -->
-
 	<div class="small-12 columns"><!-- .columns start -->
 
 		<div id="primary" class="content-area">
@@ -36,7 +34,5 @@ get_header(); ?>
 		</div><!-- #primary -->
 
 	</div><!-- .columns end -->
-
-</div><!-- .row end -->
 
 <?php get_footer(); ?>

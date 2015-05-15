@@ -10,19 +10,17 @@
 
 	</div><!-- #content -->
 
-	<footer id="colophon" class="site-footer" role="contentinfo">
+	<footer id="colophon" class="site-footer row" role="contentinfo">
 
-		<div class="row"><!-- .row start -->
 
-			<div class="small-12 columns"><!-- .columns start -->
+		<div class="small-12 columns"><!-- .columns start -->
 
-				<div class="site-info">
-					<p><a href="http://australiansteve.com"><i class="fa fa-copyright"></i> AustralianSteve.com</a></p>
-				</div><!-- .site-info -->
+			<div class="site-info">
+				<p><a href="http://australiansteve.com"><i class="fa fa-copyright"></i> AustralianSteve.com</a></p>
+			</div><!-- .site-info -->
 
-			</div><!-- .columns end -->
+		</div><!-- .columns end -->
 
-		</div><!-- .row end -->
 
 	</footer><!-- #colophon -->
 	

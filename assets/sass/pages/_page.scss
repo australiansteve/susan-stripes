@@ -1,5 +1,23 @@
+#page {
+	min-height: 750px;
+}
+
+#page:after {
+	position: absolute;
+	content: "";
+	display: block;
+	top: 0;
+	left: 0;
+	background-image: url("http://weavercrawford.com/wp-content/uploads/2015/04/bg.png");
+	height: 100%;
+	width: 100%;
+	opacity: 0.7;
+	z-index: -1;
+}
+
 #content {
-	margin: 2rem 0;
+	background: #FFFFFF;
+	padding-top: 2rem;
 }
 
 .entry-meta {
