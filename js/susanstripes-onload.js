@@ -16,13 +16,12 @@ var pageData = null;
 
 function changeContent(nonDynamicUrl, callback) {
 	
-	if (contentCleared === false || pageData === undefined)
+	if (contentCleared === false || pageData === null)
 	{
-		setTimeout(function(){changeContent(pageData, callback)}, 1000);
+		setTimeout(function(){changeContent(nonDynamicUrl, callback)}, 1000);
 	}
 	else {
 		//if content starts with html element we know it is a full page load, otherwise load it dynamically
-		console.log(pageData);
 		var dynamic = pageData.indexOf("<!-- austeve-dynamic-content -->") === 0;
 		if (dynamic) {
 			//dynamic change
@@ -34,7 +33,7 @@ function changeContent(nonDynamicUrl, callback) {
 		}
 		else {
 			//non dynamic, go to nonDynamicUrl
-			window.location.href = nonDynamicUrl;
+			location.href = nonDynamicUrl;
 		}
 	}
 }
