@@ -9,6 +9,14 @@ jQuery(document).ready(function() {
 	    }, i*250);
 	    
 	});
+
+	window.onpopstate = function(e){
+	    if (e.state){
+	        document.getElementById("page").innerHTML = e.state.html;
+	        document.title = siteTitle + ' - ' + e.state.pageTitle;
+	    }
+	};
+
 });
 
 var contentCleared = false;
@@ -22,7 +30,7 @@ function changeContent(nonDynamicUrl, callback) {
 	}
 	else {
 		//if content starts with html element we know it is a full page load, otherwise load it dynamically
-		var dynamic = pageData.indexOf("<!-- austeve-dynamic-content -->") === 0;
+		var dynamic = pageData.trim().indexOf("<!-- austeve-dynamic-content -->") === 0;
 		if (dynamic) {
 			//dynamic change
 			jQuery('#content').html(pageData);
@@ -38,13 +46,24 @@ function changeContent(nonDynamicUrl, callback) {
 	}
 }
 
-function getPageContent(linkurl) {
+function getPageContent(linkurl, pageTitle) {
 	jQuery('#content').fadeOut('slow', 'linear', function() {
 		contentCleared = true;
 		changeContent(linkurl, function() {
 			pageData = null;
 			contentCleared = false;
 			callDynamicScripts();
+
+        	document.title = siteTitle + ' - ' + pageTitle;
+			window.history.pushState(
+		        {
+		            "html": jQuery('#page').html(),
+		            "pageTitle": pageTitle
+		        },
+		        pageTitle,
+		        linkurl
+		   	);
+
 		});
 	});
 
@@ -58,20 +77,23 @@ function getPageContent(linkurl) {
 
 jQuery(document).on('click', '.menu-item a', function(e) {
 	var linkurl = jQuery(this).attr('href');
+	var linkText = jQuery(this).text();
+
 	jQuery("li.active").removeClass("active");
 	jQuery(this).parent().addClass("active");
 
 	e.preventDefault(); //Stop the natural link target from being followed. Instead we will load using AJAX
 
-	getPageContent(linkurl);
+	getPageContent(linkurl, linkText);
 });
 
 jQuery(document).on('click', '#content a', function(e) {
 	var linkurl = jQuery(this).attr('href');
+	var linkTitle = jQuery(this).attr('title');
 
 	e.preventDefault(); //Stop the natural link target from being followed. Instead we will load using AJAX
 
-	getPageContent(linkurl);
+	getPageContent(linkurl, linkTitle);
 });
 
 function callDynamicScripts() {

@@ -6,6 +6,16 @@
  */
 
 ?>
+
+<?php
+$is_ajax = !empty( $_SERVER['HTTP_X_REQUESTED_WITH'] ) && strtolower( $_SERVER['HTTP_X_REQUESTED_WITH'] ) == 'xmlhttprequest';
+
+if ( !$is_ajax ) {
+   // Regular request!
+	get_header(); 
+}
+?>
+
 <!-- austeve-dynamic-content -->
 <div class="small-12 columns"><!-- .columns start -->
 
@@ -24,3 +34,9 @@
 </div><!-- .columns end -->
 <!-- end austeve-dynamic-content -->
 
+<?php
+if ( !$is_ajax ) {
+   // Regular request!
+	get_footer(); 
+}
+?>

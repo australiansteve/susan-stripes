@@ -23,7 +23,25 @@
 
 
 	</footer><!-- #colophon -->
-	
+
+	<script>
+		var siteTitle = "<?php bloginfo('name'); ?>";
+		var siteURL = "<?php bloginfo('url'); ?>";
+		var windowLocation = window.location.href.replace(/\/$/, ""); // .replace() removes trailing slash (one)
+
+		if (windowLocation === "<?php bloginfo('url'); ?>")
+		{
+			siteTitle = document.title;
+			window.history.pushState(
+		        {
+		            "html": jQuery('#page').html(),
+		            "pageTitle": siteTitle
+		        },
+		        siteTitle,
+		        "<?php bloginfo('url'); ?>"
+		   	);
+		}
+	</script>	
 </div><!-- #page -->
 
 <?php wp_footer(); ?>
