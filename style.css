@@ -1,10 +1,10 @@
 /*
 Theme Name: Susanstripes
 Theme URI: https://github.com/australiansteve/susanstripes
-Author: Zeek Interactive
-Author URI: http://zeek.com
+Author: AustralianSteve
+Author URI: http://australiansteve.com
 Description: Description
-Version: 0.0.1
+Version: 1.0.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: susanstripes
@@ -14,18 +14,9 @@ Susanstripes is based on Underscores http://underscores.me/, (C) 2012-2015 Autom
 
 */
 
-/* Overwrite styling on contact form from 'Contact Form to Email' plugin */
-#fbuilder #captchaimg_1 {
-	margin-bottom: 1rem;
-}
-
-#fbuilder div.pbSubmit {
-	background: rgba(0,0,0, 0.3);
-	color: #FFF;
-  	margin-top: 0px;
-  	margin-left: calc(50% - 3.5rem);
-  	text-align: center;
- 	padding: 1rem 2rem;
+/* Overwrite button color of austeve-image-gallery plugin */
+.widget_austeve_gallery_widget .layover .button {
+	background-color: rgba(0, 0, 0, 1); /* Black */
 }
 
 /* Overwrite default 'slick-carousel' themes */
