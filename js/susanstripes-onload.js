@@ -38,13 +38,7 @@ function changeContent(nonDynamicUrl, callback) {
 	}
 }
 
-jQuery(document).on('click', '.menu-item a', function(e) {
-	var linkurl = jQuery(this).attr('href');
-	jQuery("li.active").removeClass("active");
-	jQuery(this).parent().addClass("active");
-
-	e.preventDefault(); //Stop the natural link target from being followed. Instead we will load using AJAX
-	
+function getPageContent(linkurl) {
 	jQuery('#content').fadeOut('slow', 'linear', function() {
 		contentCleared = true;
 		changeContent(linkurl, function() {
@@ -60,6 +54,24 @@ jQuery(document).on('click', '.menu-item a', function(e) {
 	}).done(function(data) {
 		pageData = data;
 	});
+}
+
+jQuery(document).on('click', '.menu-item a', function(e) {
+	var linkurl = jQuery(this).attr('href');
+	jQuery("li.active").removeClass("active");
+	jQuery(this).parent().addClass("active");
+
+	e.preventDefault(); //Stop the natural link target from being followed. Instead we will load using AJAX
+
+	getPageContent(linkurl);
+});
+
+jQuery(document).on('click', '#content a', function(e) {
+	var linkurl = jQuery(this).attr('href');
+
+	e.preventDefault(); //Stop the natural link target from being followed. Instead we will load using AJAX
+
+	getPageContent(linkurl);
 });
 
 function callDynamicScripts() {
