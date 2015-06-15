@@ -24,6 +24,12 @@
 
 	</footer><!-- #colophon -->
 
+	<div id="dynamicLoading" class="row" style="display:none">
+		<div class="small-12 columns text-center">
+			<i class="fa fa-spinner fa-pulse"></i>
+		</div>
+	</div>
+
 	<script>
 		var siteTitle = "<?php bloginfo('name'); ?>";
 		var siteURL = "<?php bloginfo('url'); ?>";

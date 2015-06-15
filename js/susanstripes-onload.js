@@ -47,6 +47,11 @@ function changeContent(nonDynamicUrl, callback) {
 }
 
 function getPageContent(linkurl, pageTitle) {
+	//First add a spinner into the footer
+	jQuery("#colophon").hide();
+	jQuery("#dynamicLoading").show();
+
+	//Then fade out the current content
 	jQuery('#content').fadeOut('slow', 'linear', function() {
 		contentCleared = true;
 		changeContent(linkurl, function() {
@@ -63,10 +68,13 @@ function getPageContent(linkurl, pageTitle) {
 		        pageTitle,
 		        linkurl
 		   	);
+			jQuery("#colophon").show();
+			jQuery("#dynamicLoading").hide();
 
 		});
 	});
 
+	//Then make a request for new content. When it's recieved set the pageData object
 	jQuery.ajax({
 		url: linkurl,
 		context: document.body
