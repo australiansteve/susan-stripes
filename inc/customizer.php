@@ -14,6 +14,48 @@ function susanstripes_customize_register( $wp_customize ) {
 	$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
 	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
 	$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
+
+	$wp_customize->add_setting( 'header_image_large' , array(
+	    'default'     => 'none',
+	    'transport'   => 'refresh',
+	) );
+
+	$wp_customize->add_setting( 'header_image_small' , array(
+	    'default'     => 'none',
+	    'transport'   => 'refresh',
+	) );
+
+	$wp_customize->add_section( 'susanstripes_theme_options' , array(
+	    'title'      => __( 'Header Image', 'susanstripes' ),
+	    'priority'   => 30,
+	) );
+
+	$wp_customize->add_control( 
+		new WP_Customize_Image_Control(
+           	$wp_customize,
+           	'header_image_large',
+           	array(
+               	'label'      => __( 'For large screens', 'susanstripes' ),
+               	'section'    => 'susanstripes_theme_options',
+               	'settings'   => 'header_image_large',
+               	'context'    => 'susanstripes' 
+           	)
+       	)
+   	);
+
+	$wp_customize->add_control( 
+		new WP_Customize_Image_Control(
+           	$wp_customize,
+           	'header_image_small',
+           	array(
+               	'label'      => __( 'For small screens', 'susanstripes' ),
+               	'section'    => 'susanstripes_theme_options',
+               	'settings'   => 'header_image_small',
+               	'context'    => 'susanstripes' 
+           	)
+       	)
+   	);
+
 }
 add_action( 'customize_register', 'susanstripes_customize_register' );
 

@@ -51,7 +51,7 @@
 
 					<div class="small-12 columns"><!-- .columns start -->
 
-						<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img class="site-header" src="http://weavercrawford.com/wp-content/uploads/2015/05/awc2name-small-screen.png"/></a>
+						<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img class="site-header" src="<?php echo get_theme_mod( 'header_image_small', '' ); ?>"/></a>
 
 					</div><!-- .columns end -->
 
@@ -61,7 +61,7 @@
 
 					<div class="medium-6 columns"><!-- .columns start -->
 
-						<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img class="site-header" src="http://weavercrawford.com/wp-content/uploads/2015/05/awc2name-large-screen-black.png"/></a>
+						<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img class="site-header" src="<?php echo get_theme_mod( 'header_image_large', '' ); ?>"/></a>
 
 					</div><!-- .columns end -->
 
